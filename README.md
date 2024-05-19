@@ -32,8 +32,9 @@ The RPi or PC is connected to the Arduino by a USB A/B cable (printer cable). Or
 
 Both USB and IP cameras are supported. Calibration for fish-eye distortion is provided, and is more likely to be needed for IP cameras. USB cameras are often OK without it.
 
-Things used in this project
-Hardware components
+## Things used in this project
+
+# Hardware components
 
 Arduino Mega 2560 ×	1	
 Raspberry Pi 3 Model B Or a later version ×	1	
@@ -54,7 +55,8 @@ Stockfish chess engine
 Hand tools and fabrication machines
 3D Printer (generic)	
 
-The Hardware Build
+# The Hardware Build
+
 The 3D printer files for the robot are freely available as specified as specified by F Tobler here. There you will find a parts list, an animation and a video and many other things. Tobler gives a great description of hardware, Arduino software and robot assembly.
 
 The Tobler arm is modified with the longer arm components as specified here. This is required in order to reach the far corners of the chess board.
@@ -69,7 +71,22 @@ The stepper motors give very high precision and repeatability.
 
 As an alternative to the USB connection from the Raspberry Pi, other Linux or Windows, the code supports Bluetooth (not BLE), using an HC-05.
 
+![Community Robot Arm](/assets/images/wiring.jpg)
 
+
+
+
+# The Software Which Moves The Robot
+
+All the Raspberry Pi code is written in Python 3.
+
+So, we then have code which will move pieces, take pieces, castle, support en passant, and so on.
+
+The chess engine is Stockfish - which can beat any human! "Stockfish is one of the strongest chess engines in the world. It is also much stronger than the best human chess grandmasters."
+
+I use some code from chessfortherapy.co.uk to validate the human's move and interact with Stockfish. My code for recognising the human's move and moving the robot arm interfaces with that.
+
+On the Arduino, Inverse kinematics code is used in order to move the various motors correctly such that chess pieces can be moved. Code available from Tobler.
 
 
 
