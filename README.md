@@ -71,7 +71,7 @@ The stepper motors give very high precision and repeatability.
 
 As an alternative to the USB connection from the Raspberry Pi, other Linux or Windows, the code supports Bluetooth (not BLE), using an HC-05.
 
-![Community Robot Arm](/assets/images/wiring.jpg)
+![Community Robot Arm](/wiring.jpg)
 
 
 
